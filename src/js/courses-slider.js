@@ -36,14 +36,13 @@ const slider = () => {
         const slider = document.querySelector(".courses-list__item--slider");
         const {url, title, text, date} = sliderDataSet[i];
         const slideData = `
-        <a href="${url}" class="course-card course-card--slider ${i == 0 ? 'visible' : ''}">
-            <div class="course-card__title">${title}</div>
-            <div class="course-card__text">
-                <i>${text}</i>
-            </div>
-            <div class="course-card__date">${date}</div>
-        </a>
-      `;
+            <a href="${url}" class="course-card course-card--slider ${i == 0 ? 'visible' : ''}">
+                <div class="course-card__title">${title}</div>
+                <div class="course-card__text">
+                    <i>${text}</i>
+                </div>
+                <div class="course-card__date">${date}</div>
+            </a>`;
         slider.innerHTML += slideData;
     }
 
@@ -58,7 +57,6 @@ const slider = () => {
     }, 4000);
 }
 
-if (document.getElementsByClassName(".courses-list__item--slider") == null) {
+if (document.getElementsByClassName(".courses-list__item--slider") != null) {
     slider();
-    console.log('some');
 }
