@@ -1,0 +1,78 @@
+@import "brand.less";
+
+.courses-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin-bottom: 30px;
+
+  &--on-main-page {
+    justify-content: space-between;
+
+
+  }
+
+  &__item {
+    flex: 0 1 33.3%;
+    position: relative;
+
+    &--wide {
+      flex: 1 1 50%;
+    }
+  }
+}
+
+.course-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 200px;
+  background: url("../images/bg_vue.png") round;
+  border: 1px solid #8d8d8d;
+  border-radius: 3px;
+  margin: 15px;
+  padding: 10px;
+
+  &:hover {
+    background-color: @bg-gray;
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  &__flag {
+    background: tomato;
+    border-radius: 2px;
+    margin-top: 5px;
+    padding: 5px;
+  }
+
+  &__text {
+    margin: auto 0 5px;
+  }
+
+  &__date {
+    align-self: flex-end;
+  }
+
+  &--slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s;
+  }
+
+  &--slider.visible {
+    opacity: 1;
+    z-index: 2;
+  }
+
+}

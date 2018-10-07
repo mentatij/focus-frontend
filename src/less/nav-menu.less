@@ -1,0 +1,59 @@
+@import "brand.less";
+.nav-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 20px;
+  text-decoration: none;
+  color: @black;
+
+  &__link {
+    padding: 0 15px;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      color: @white;
+      background-color: @middle-blue;
+      transition: background-color 0.2s;
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  &:hover {
+    .dropdown__block {
+      display: block;
+    }
+  }
+
+  &__block {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 3;
+  }
+}
+
+.dropdown-list {
+
+  &__item {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    padding: 10px 15px;
+    background-color: @middle-blue;
+    transition: background-color 0.2s;
+    color: @white;
+    border-top: 1px solid @light-blue;
+
+    &:hover {
+      background-color: @dark-blue;
+      transition: background-color 0.2s;
+    }
+  }
+}
+
