@@ -57,6 +57,6 @@ const slider = () => {
     }, 4000);
 }
 
-if (document.getElementsByClassName(".courses-list__item--slider") != null) {
+if (document.getElementsByClassName("courses-list__item--slider").length > 0) {
     slider();
 }
