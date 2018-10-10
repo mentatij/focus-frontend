@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -21,6 +21,11 @@ module.exports = {
             }
         },
         {
+            test: /\.css$/,
+            include: path.resolve(__dirname, 'src/css/'),
+            use: [ "style-loader", "css-loader"]
+        },
+        {
             test: /\.less$/,
             include: path.resolve(__dirname, 'src/less/'),
             use: [ "style-loader", "css-loader", "less-loader"]
@@ -28,7 +33,6 @@ module.exports = {
         {
             test: /\.(jpe?g|png|gif|svg)$/,
             include: path.resolve(__dirname, 'src/images/'),
-            // use: ['url-loader?limit=10000', 'img-loader']
             loader: 'file-loader?name=./images/[name].[ext]'
         }
         ]
@@ -43,5 +47,9 @@ module.exports = {
         hot: true
     },
     plugins: [
+        new CopyWebpackPlugin([{
+            from: 'src/*.html',
+            to: '[name].html'
+        }])
     ]
 };

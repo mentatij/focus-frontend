@@ -1,3 +1,5 @@
+import './css/reset.css';
+
 import './less/styles.less';
 import './less/nav-menu.less';
 import './less/courses.less';
