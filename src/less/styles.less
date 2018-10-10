@@ -8,8 +8,8 @@ html {
 body {
   height: 100%;
   color: @black;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
+  font-family: @font;
+  font-weight: @font-light;
 }
 
 a {
@@ -32,7 +32,7 @@ img {
   &__header-container {
     flex-shrink: 0;
     width: 100%;
-    background-color: @bg-biege;
+    background-color: @biege;
     box-shadow: @light-blue 0 0 0 1px;
   }
 
@@ -45,7 +45,7 @@ img {
   &__footer-container {
     flex-shrink: 0;
     width: 100%;
-    background-color: @bg-gray;
+    background-color: @gray;
     box-shadow: @light-blue 0 0 0 1px;
   }
 }
@@ -95,7 +95,7 @@ img {
     line-height: 35px;
     font-size: 13px;
     color: #747474;
-    border: 1px solid #8d8d8d;
+    border: 1px solid @border-grey;
     border-radius: 3px;
     background: rgba(0,0,0,0);
     padding: 0 12px;
@@ -121,13 +121,13 @@ img {
   &__title {
     margin: 0 0 30px 25px;
     font-size: 30px;
-    font-weight: 300;
+    font-weight: @font-light;
   }
 
   &__title-low {
     margin: 0 0 20px 25px;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: @font-light;
   }
 
   &__text-block {
